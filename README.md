@@ -20,3 +20,4 @@ This project builds a secure, scalable, and cost-aware Azure environment to host
 
 ## Phase 1: Set Up and Planning
 In this phase, I am setting up my Azure Account and subscription that I was provided. I was given $200 in credit for Azure to use however I'd like so I will be using it for this project, which I feel highlights many technological skills I have been learning in the Server and Cloud Administration cohort through the Microsoft and Systems Academy, as well as just other skills I have been learning on my own.
+![Subscription Setup Notification](images/SubSetupNotif.png)
