@@ -26,6 +26,8 @@ In this phase, I am setting up my Azure Account and subscription that I was prov
 - First, we are going to create a resource group and name it "ProjectResourceGroup," and use the East US region to better
 ensure a solid balance of proximity and network conditions, with the Central US or East US 2 regions as fallback options depending on the service needs.
 
+-The Second part of the infrastructure I am going to build is the Network Security Groups (NSG) and then the Virtual Network. I am building two NSGs, one called "ProjectNSG-Web"
+and another called "ProjectNSG-Secure." These will both have different inbound and outbound rules to create a secure network for our Web App.
 ![Subscription Setup Notification](images/ResourceGroupCreation)
 
 
