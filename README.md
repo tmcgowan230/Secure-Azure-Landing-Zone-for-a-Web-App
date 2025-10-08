@@ -1,5 +1,10 @@
 # Secure-Azure-Landing-Zone-for-a-Web-App
 This project builds a secure, scalable, and cost-aware Azure environment to host a simple web application.
+
+## Contributing
+
+If you've forked this repository and want to share your improvements or feedback with the original repository owner, please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on how to create a pull request.
+
 ##  Goals
 
 - Create a secure Azure landing zone using best practices.
