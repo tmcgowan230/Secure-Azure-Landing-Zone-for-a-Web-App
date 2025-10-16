@@ -33,6 +33,9 @@ and another called "ProjectNSG-Secure." These will both have different inbound a
 ![Subscription Setup Notification](images/StorageAccountDataProtection.png)
 ![Subscription Setup Notification](images/StorageAccountEncryption.png)
 
+- The Final Step for Phase 2 is to create the key vault for my web app to access secrets like passwords. I really want to once again display and enforce zero trust with this, and always requiring secure internal access is how I will be doing it on this step by utilizing a key vault. I configured the key fault with soft delete enabled and a 90 day retention period. For Access configuration, I am going to use RBAC to practice better governance of the vault and what is inside of it. I denied public access on the networking tab and created a new private endpoint called "PESecureVault" for connection to my Virtual network and attached it to my Secure Subnet
+![Subscription Setup Notification](images/KeyVaultOverview.png)
+
 
 
 
