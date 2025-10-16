@@ -27,6 +27,12 @@ and another called "ProjectNSG-Secure." These will both have different inbound a
 - Next is to configure and create my outbound rules for all traffic for my "ProjectNSG-Web" network security group. The first outbound rule I created was called "Allow-Web-to-Secure," and this allows the backend access communication between my subnets. After that, I then created the next rule "Allow-HTTPS-HTTP-Outbound," allowing the outbound traffic to reach the internet via HTTPS and HTTP only, and the "Deny-All-Outbound," which is the final outbound rule I created, complements the previous rule because it blocks all other outbound traffic unless it's HTTPS or HTTP due to that rule's higher priority. I did this to really try and enforce zero trust.
 ![Subscription Setup Notification](images/NSGWebRulesOutbound.png)
 
+- Next Step in building the Infrastructure is to build the Storage account for my project. This will simulate my web app's data storage, and we will use blob storage since it is the most flexible and best suited for web app content. For this, the Storage account's name is going to be "ProjectSA9876," and I will continue using the same subscription I have been provided. The Configuration of the storage account is using Blob Storage as mentioned earlier. I am also using just Standard performance for cost management and LRS (Locally redundant Storage). Realistically, I would use Zone Redundant Storage to have a minimal disaster recovery plan in place however, this is a quick project to exercise my skills and practice in Azure.
+![Subscription Setup Notification](images/StroageAccountCreation.png)
+- I am also going to set up a private endpoint connected to my "SubnetSecure" to make sure the storage account is only accessible from inside my network, and nobody can access it from the internet. I am denying Public Network Access, which allows outbound access and restricts Inbound access. Then, I created a Private Endpoint called "PESecureStorage." After I created that and configured its settings I moved on to Data Protection and made sure that Blob Soft Delete (14 Days), Containers Soft Delete (7 days), Point and Time Restoration for Containers (7 Days), Versioning for Blobs, and finally Blob Change Feed (Keep All Logs) were all enabled with Encryption and Infrastructure Encryption enabled to ensure Defense in Depth, and zero trust (Assuming a breach) was applied.
+![Subscription Setup Notification](images/StorageAccountDataProtection.png)
+![Subscription Setup Notification](images/StorageAccountEncryption.png)
+
 
 
 
